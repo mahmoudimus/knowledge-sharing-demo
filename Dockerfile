@@ -1,10 +1,10 @@
-FROM python:3-alpine3.7
+FROM python:3-alpine
 
 # install console and node
 RUN apk update &&\
     apk add --no-cache \
         bash \
-        socat \
+        socat && \
     mkdir -p /opt/app
 
 # install pip ( in separate dir due to docker cache)
